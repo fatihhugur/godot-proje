@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dkurc1t7nw106"]
+
+[sub_resource type="Gradient" id="Gradient_0rwas"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xhfnw"]
+gradient = SubResource("Gradient_0rwas")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0.014450867, 0.9884393)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kpjcp"]
+radius = 5.0
+height = 20.0
+
+[node name="Node2D" type="Node2D" unique_id=1856658738]
+metadata/_edit_horizontal_guides_ = [-25.0]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=741059949]
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1405494419]
+zoom = Vector2(2, 2)
+
+[node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D" unique_id=1830101294]
+modulate = Color(0.8392157, 0.827451, 0.827451, 1)
+position = Vector2(1, -12.5)
+scale = Vector2(0.21875, 0.390625)
+texture = SubResource("GradientTexture2D_xhfnw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1417607224]
+position = Vector2(1, -13)
+shape = SubResource("CapsuleShape2D_kpjcp")
